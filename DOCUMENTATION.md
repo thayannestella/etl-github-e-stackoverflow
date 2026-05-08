@@ -259,9 +259,11 @@ Funções de consulta:
 ### `dashboard/charts.py`
 
 Funções que retornam objetos Plotly:
-- `languages_chart(df)`
-- `topics_chart(df)`
-- `correlation_chart(df)`
+- `languages_chart(df)`: gráfico de barras com as top linguagens e quantidade de repositórios
+- `topics_chart(df)`: gráfico de barras com os top 10 tópicos do StackOverflow e menções
+- `correlation_chart(df)`: gráfico de linha mostrando a correlação entre linguagens (eixo X em ordem alfabética) e quantidade de repositórios no GitHub (eixo Y)
+  - Cada ponto da linha exibe o valor exato de repositórios
+  - Facilita a visualização de tendências entre as linguagens
 
 ### `dashboard/insights.py`
 
@@ -316,6 +318,12 @@ StackOverflow:
 - Transformação de JSON em tabelas relacionais silver
 - Geração de indicadores gold e correlações entre GitHub e StackOverflow
 - Dashboard de visualização com Streamlit e Plotly
+  - Gráfico de barras para top linguagens no GitHub
+  - Gráfico de barras para top tópicos no StackOverflow
+  - Gráfico de linha para correlação entre linguagens e repositórios (alfabético no eixo X)
+  - Tabela de atividade de repositórios
+  - Cards de métricas principais
+  - Geração automática de insights
 - Tratamento de rate limit da API do GitHub
 - Log de execução em `logs/pipeline.log`
 
