@@ -1,0 +1,5 @@
+apache-airflow>=2.0.0
+pandas
+requests
+sqlalchemy
+# Add other dependencies as needed
